@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def test():
-    return jsonify({'message': 'This endpoint is running!!'})
+    return jsonify({'message': 'This endpoint is running 🤌🤌🤌'})
 
 
 if __name__ == '__main__':
