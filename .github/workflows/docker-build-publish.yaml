@@ -41,9 +41,9 @@ jobs:
       - name: Set the Kubernetes context
         uses: azure/k8s-set-context@v2
         with:
-          method: service-account
-          k8s-url: https://23195712-03b8-4ab1-b7d6-d5480f8cfcc1.ap-southeast-1.linodelke.net:443
-          k8s-secret: ${{ secrets.KUBERNETES_SECRET }}
+          method: kubeconfig
+          kubeconfig: ${{ secrets.KUBERNETES_KUBECONFIG }}
+  
       - name: Checkout source
         uses: actions/checkout@v3
 
