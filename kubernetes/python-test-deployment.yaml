@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-test-deployment
+  labels:
+    app: python-test
+spec:
+  replicas: 6
+  selector:
+    matchLabels:
+      app: python-test
+  template:
+    metadata:
+      labels:
+        app: python-test
+    spec:
+      containers:
+      - name: python-test
+        image: adreasnow/python-test:latest
+        imagePullPolicy: Always
+        ports:
+          - containerPort: 80
