@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: python-test-deployment
+  name: play-deployment
   labels:
-    app: python-test
+    app: play
 spec:
   replicas: 6
   selector:
     matchLabels:
-      app: python-test
+      app: play
   template:
     metadata:
       labels:
-        app: python-test
+        app: play
     spec:
       containers:
-      - name: python-test
+      - name: play-flask
         image: adreasnow/python-test:latest
         imagePullPolicy: Always
         ports:

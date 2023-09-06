@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: python-test-service
+  name: play-service
   annotations:
     service.beta.kubernetes.io/linode-loadbalancer-throttle: "4"
   labels:
@@ -14,5 +14,5 @@ spec:
     protocol: TCP
     targetPort: 80
   selector:
-    app: python-test
+    app: play
   sessionAffinity: None
