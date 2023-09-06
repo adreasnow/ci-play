@@ -1,1 +1,4 @@
 *kubeconfig.yaml
+*secrets
+.terraform
+.terraform.lock.hcl
