@@ -11,7 +11,7 @@ provider "linode" {
     # token = var.linode_token
 }
 
-resource "linode_lke_cluster" "foobar" {
+resource "linode_lke_cluster" "play" {
     k8s_version = var.k8s_version
     label = var.label
     region = var.region
@@ -27,22 +27,22 @@ resource "linode_lke_cluster" "foobar" {
 }
 
 output "kubeconfig" {
-    value = linode_lke_cluster.foobar.kubeconfig
+    value = linode_lke_cluster.play.kubeconfig
     sensitive = true
 }
 
 output "api_endpoints" {
-    value = linode_lke_cluster.foobar.api_endpoints
+    value = linode_lke_cluster.play.api_endpoints
 }
 
 output "status" {
-    value = linode_lke_cluster.foobar.status
+    value = linode_lke_cluster.play.status
 }
 
 output "id" {
-    value = linode_lke_cluster.foobar.id
+    value = linode_lke_cluster.play.id
 }
 
 output "pool" {
-    value = linode_lke_cluster.foobar.pool
+    value = linode_lke_cluster.play.pool
 }

@@ -1,7 +1,3 @@
-variable "token" {
-    description = "Linode API token"
-}
-
 variable "k8s_version" {
     description = "Kubernetes version"
     default = "1.26"
