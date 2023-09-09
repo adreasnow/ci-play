@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: play-flask
-        image: adreasnow/python-test:latest
+        image: adreasnow/python-test-app:latest
         imagePullPolicy: Always
         ports:
           - containerPort: 80

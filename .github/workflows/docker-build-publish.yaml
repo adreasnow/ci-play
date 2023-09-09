@@ -30,8 +30,8 @@ jobs:
           context: .
           push: true
           tags: |
-            adreasnow/python-test:latest
-            adreasnow/python-test:${{ github.sha }}
+            adreasnow/python-test-app:latest
+            adreasnow/python-test-app:${{ github.sha }}
 
   deploy:
     name: Deploy
@@ -52,7 +52,7 @@ jobs:
         with:
           namespace: default
           manifests: |
-            kubernetes/python-test-deployment.yaml
-            kubernetes/python-test-service.yaml
+            kubernetes/app-deployment.yaml
+            kubernetes/service.yaml
           images: |
-            adreasnow/python-test:${{ github.sha }}
+            adreasnow/python-test-app:${{ github.sha }}
