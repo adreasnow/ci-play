@@ -2,3 +2,4 @@
 *secrets
 .terraform
 .terraform.lock.hcl
+.vscode
