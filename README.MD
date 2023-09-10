@@ -5,7 +5,7 @@ This is a play space for me to be able play with building a full devops pipeline
 * [x] Kubernetes cluster on Linode
 * [x] Pods distributed with load balancing service
 * [x] GitHub actions workflows to containerise and push new images to docker
-* [ ] Python Test Cases
+* [x] Python Test Cases
 * [ ] Separate container within each pod communicates with main container
 * [ ] Centralised DB service pod/volume
 * [ ] Promethius logging
