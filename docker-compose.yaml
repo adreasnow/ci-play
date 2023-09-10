@@ -2,11 +2,8 @@ services:
   app:
     build: module-app/
     container_name: app
-    command: python3 test_module
     ports:
       - 80:80
-    volumes:
-      - .:/app
     environment:
       FLASK_HOST: 0.0.0.0
       FLASK_PORT: 80
