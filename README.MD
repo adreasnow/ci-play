@@ -10,5 +10,4 @@ This is a play space for me to be able play with building a full devops pipeline
 * [ ] Centralised DB service pod/volume
 * [ ] Promethius logging
 
-
-
+==Most of the work that I've done in this repo hasn't been pushed to github, and thus this repo alone is not representative of my CI/CD capabilities==
