@@ -4,7 +4,7 @@
 
 Most of what I'm doing in this repo is offline, so there's a lot more that I haven't uploaded, including more intricate golang modules, GCP infra (instead of Linode), and a few other half implented tools. This playground is very much a scratch space...
 
-## what this repo **is**
+## What this repo **is**
 
 This is a play space for me to be able play with building a full devops pipeline from the ground up. At present I've implemented the following:
 
