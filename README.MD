@@ -1,4 +1,11 @@
 # CI/CD Play
+
+## Heads Up
+
+Most of what I'm doing in this repo is offline, so there's a lot more that I haven't uploaded, including more intricate golang modules, GCP infra (instead of Linode), and a few other half implented tools. This playground is very much a scratch space...
+
+## what this repo **is**
+
 This is a play space for me to be able play with building a full devops pipeline from the ground up. At present I've implemented the following:
 
 * [x] Terraform IaC
@@ -9,5 +16,3 @@ This is a play space for me to be able play with building a full devops pipeline
 * [ ] Separate container within each pod communicates with main container
 * [ ] Centralised DB service pod/volume
 * [ ] Promethius logging
-
-Most of the work that I've done in this repo hasn't been pushed to github, and thus this repo alone is not representative of my CI/CD capabilities
