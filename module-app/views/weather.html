@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <titel>Weather Forecast</titel>
+    </head>
+    <body>
+        <h1>Weather for {{ .City }}</h1>
+        <table border="">
+            <tr>
+                <th>Date</th>
+                <th>Temperature</th>
+            </tr>
+            {{ range .Forecasts }}
+            <tr>
+                <td>{{ .Date }}</td>
+                <td>{{ .Temperature }}</td>
+            </tr>
+            {{ end }}
+        </table>
+    </body>
+</html>

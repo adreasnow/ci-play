@@ -1,12 +1,19 @@
-FROM alpine:latest
-RUN apk add py3-pip && rm -rf /var/cache/apk/*
+FROM golang:latest
 
 WORKDIR /app
-COPY requirements.txt /app
-RUN pip install --no-cache-dir --upgrade -r requirements.txt
 
-ADD test_module /app/test_module
-ENV FLASK_HOST=0.0.0.0
-ENV FLASK_PORT=80
+ADD views /app/views
+ADD main.go /app/
 
-ENTRYPOINT ["python3", "test_module"]
+RUN go mod init test
+RUN go get github.com/gin-gonic/gin
+RUN go get github.com/jmoiron/sqlx
+RUN go get github.com/lib/pq
+
+RUN go build main.go
+
+ENV DATABASE_URL=postgres://forecast:forecast@db:5432/forecast?sslmode=disable
+
+EXPOSE 8080/tcp
+
+ENTRYPOINT ["/app/main"]

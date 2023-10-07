@@ -1,9 +1,22 @@
 services:
+  database:
+    build: module-db/
+    container_name: db
+    networks:
+      module:
+        aliases:
+          - database
   app:
     build: module-app/
     container_name: app
     ports:
-      - 80:80
-    environment:
-      FLASK_HOST: 0.0.0.0
-      FLASK_PORT: 80
+      - 8080:8080
+    networks:
+      - module
+    links:
+      - "database"
+    depends_on:
+      - database
+networks:
+  module:
+    driver: bridge
