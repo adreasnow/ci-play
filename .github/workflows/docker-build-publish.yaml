@@ -6,38 +6,16 @@ on:
       - 'main'
 
 jobs:
-#   test:
-#     runs-on: ubuntu-latest
-#     name: Tests
-#     steps:
-#       - name: Checkout source
-#         uses: actions/checkout@v3
-#       - name: Set up Python
-#         uses: actions/setup-python@v4
-#         with:
-#           python-version: 3.11
-#       - name: Install Dependencies
-#         run: |
-#           python -m pip install --upgrade pip
-#           pip install pytest
-#           pip install -r module-app/requirements.txt
-#       - name: Test app with Pytest
-#         run: |
-#           pytest module-app/tests.py
   build:
     name: Build
-    # needs: [test]
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        go-version: [ '1.21.x' ]
     steps:
       - name: Checkout source
         uses: actions/checkout@v4
-      - name: Setup Go ${{ matrix.go-version }}
+      - name: Setup Go 1.21.1
         uses: actions/setup-go@v4
         with:
-          go-version: ${{ matrix.go-version }}
+          go-version: 1.21.1
       - name: Install go deps
         run: |
           go mod init main
